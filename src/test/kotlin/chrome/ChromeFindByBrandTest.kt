@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 import org.openqa.selenium.By
 import org.openqa.selenium.Dimension
 import org.openqa.selenium.Keys
-import org.openqa.selenium.firefox.FirefoxDriver as ChromeDriver
+import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.remote.RemoteWebDriver
 import java.time.Duration
 
@@ -28,7 +28,6 @@ class ChromeFindByBrandTest {
                 .size = Dimension(1800, 900)
         }
     }
-
     @AfterEach
     fun tearDown() {
         driver.quit()
@@ -53,6 +52,7 @@ class ChromeFindByBrandTest {
                 Assertions.assertTrue(element.isEnabled)
                 element.click()
             }
+            Thread.sleep(1000L)
             it.findElements(By.xpath("//div[@class='x-product-card-description__brand-name _brandName_1rcja_6 x-product-card-description__brand-name_faded']"))
                 .forEach { brandName ->
                     Assertions.assertEquals("Sela", brandName.text)

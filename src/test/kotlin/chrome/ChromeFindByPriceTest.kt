@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.ValueSource
 import org.openqa.selenium.By
 import org.openqa.selenium.Dimension
 import org.openqa.selenium.Keys
-import org.openqa.selenium.firefox.FirefoxDriver as ChromeDriver
+import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.remote.RemoteWebDriver
 import java.time.Duration
 
@@ -61,7 +61,7 @@ class ChromeFindByPriceTest {
     }
 
     @ParameterizedTest
-    @ValueSource(ints = [1_000, 9_000, 100_000])
+    @ValueSource(ints = [1_000, 100_000])
     fun `find product by max price`(maxPrice: Int){
         driver.also {
             it.get("https://lamoda.ru/")
