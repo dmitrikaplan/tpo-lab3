@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 import org.openqa.selenium.By
 import org.openqa.selenium.Dimension
 import org.openqa.selenium.Keys
-import org.openqa.selenium.firefox.FirefoxDriver as ChromeDriver
+import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.remote.RemoteWebDriver
 import java.time.Duration
 
